@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --color-psp-blue: #6BC6E6;
+}
