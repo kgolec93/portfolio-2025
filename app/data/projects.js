@@ -198,7 +198,7 @@ export const projectsList = [
             buttonText: 'Addon page'
         },
         projectUrl: 'https://superhivemarket.com/products/flow-manager',
-        projectGithubUrl: '',
+        projectGithubUrl: 'https://github.com/kgolec93/flow-basic',
         ytOverview: 'https://www.youtube.com/embed/kTedOXzEAdk?si=Ag1XrE5qmpE3XT5w',
         data: {
             date: '2020 - now',
@@ -229,6 +229,8 @@ export const projectsList = [
                     <li>The addon’s documentation is written using MkDocs for clear, developer-grade reference.</li>
                     <li>Future plans include integration with Polyspaace.com, allowing users to download and install assets directly from the online service through the addon.</li>
                 </ul>
+                <br/><br/>
+                GitHub repository is available for Flow Basic (Free) version 
             `,
             stack: [
                 { main: 'Python', additional: ('+ Blender Python API') },
