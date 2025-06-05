@@ -69,26 +69,28 @@ export const projectsList = [
             <br/><br/>
             Key features and technical highlights:
             <br/><br/>
-            <strong>User management</strong> – complete user registration and authentication system, including custom email verification via code-based confirmation. Authentication is handled with Firebase, which securely manages user sessions using custom auth tokens. Firebase’s security rules are configured to depend on the authenticated user's UID and token claims, ensuring safe access control to the database.
-            <br/><br/>
-            <strong>Payments integration</strong> – integration with the FastSpring payment system, which handles purchases, subscriptions, renewals, and cancellations via webhook communication. Payment-related data is processed securely on the backend. The platform is communicating with the FastSpring system via API calls to retrieve products pricing and data dynamically, including retrieving the price in the users currency, basing on his IP location.
-            <br/><br/>
-            <strong>File and image hosting</strong> – assets are hosted on Cloudflare R2, chosen for its simplicity and lack of egress fees — an important factor considering potential high data transfer volumes. Images are served via Cloudflare Images, which offers flexible transformations and delivery. When a file is requested for download, the user's access rights and subscription plan are verified on the backend, ensuring that only authorized users can access specific resources.
-            <br/><br/>
-            <strong>Cookie and privacy compliance</strong> – full compliance with GDPR and cookie regulations. A cookie consent mechanism ensures that services like Google Analytics and Meta Pixel are only enabled once user consent is explicitly given.
-            <br/><br/>
-            <strong>Marketing tools integration</strong> – the platform includes full integration with Google Tag Manager, allowing flexible and scalable tracking setup. Within GTM, both Google Analytics 4 (GA4) and Meta Pixel are configured to monitor user behavior and support marketing activities. Tracking scripts are only activated after user consent, in compliance with privacy regulations.
-            <br/><br/>
-            <strong>Mailing system</strong> – two separate mailing providers are used:
-            <br/>
-            - SendGrid for marketing communication (optional signup during account creation or later)
-            <br/>
-            - Amazon SES for transactional emails, with templates built using React Email
-            <br/><br/>
-            <strong>User and Admin dashboards</strong> – both protected by backend logic and Firestore security rules. The Admin panel includes a custom asset management system for uploading, categorizing, and editing assets directly into the database and storage.
-            <br/><br/>
-            <strong>Addon integration</strong> – the database is tightly coupled with my custom-built Blender addon Flow, which allows creators to prepare assets and export metadata in JSON format. The website reads this metadata during upload and inserts appropriate database entries (e.g., category, dimensions, Blender version, technical properties, etc.).
-            <br/><br/>
+            <ul class='pl-6 list-disc'>
+                
+                <li><strong>User management</strong> – complete user registration and authentication system, including custom email verification via code-based confirmation. Authentication is handled with Firebase, which securely manages user sessions using custom auth tokens. Firebase’s security rules are configured to depend on the authenticated user's UID and token claims, ensuring safe access control to the database.</li><br/>
+                
+                <li><strong>Payments integration</strong> – integration with the FastSpring payment system, which handles purchases, subscriptions, renewals, and cancellations via webhook communication. Payment-related data is processed securely on the backend. The platform is communicating with the FastSpring system via API calls to retrieve products pricing and data dynamically, including retrieving the price in the users currency, basing on his IP location.</li><br/>
+                
+                <li><strong>File and image hosting</strong> – assets are hosted on Cloudflare R2, chosen for its simplicity and lack of egress fees — an important factor considering potential high data transfer volumes. Images are served via Cloudflare Images, which offers flexible transformations and delivery. When a file is requested for download, the user's access rights and subscription plan are verified on the backend, ensuring that only authorized users can access specific resources.</li><br/>
+                
+                <li><strong>Cookie and privacy compliance</strong> – full compliance with GDPR and cookie regulations. A cookie consent mechanism ensures that services like Google Analytics and Meta Pixel are only enabled once user consent is explicitly given.</li><br/>
+                
+                <li><strong>Marketing tools integration</strong> – the platform includes full integration with Google Tag Manager, allowing flexible and scalable tracking setup. Within GTM, both Google Analytics 4 (GA4) and Meta Pixel are configured to monitor user behavior and support marketing activities. Tracking scripts are only activated after user consent, in compliance with privacy regulations.</li><br/>
+                
+                <li><strong>Mailing system</strong> – two separate mailing providers are used:</li>
+                <ul class='pl-6 list-disc'>
+                
+                    <li>SendGrid for marketing communication (optional signup during account creation or later)</li>
+                    <li>Amazon SES for transactional emails, with templates built using React Email</li>
+                </ul><br/>
+                <li><strong>User and Admin dashboards</strong> – both protected by backend logic and Firestore security rules. The Admin panel includes a custom asset management system for uploading, categorizing, and editing assets directly into the database and storage.</li><br/>
+                
+                <li><strong>Addon integration</strong> – the database is tightly coupled with my custom-built Blender addon Flow, which allows creators to prepare assets and export metadata in JSON format. The website reads this metadata during upload and inserts appropriate database entries (e.g., category, dimensions, Blender version, technical properties, etc.).</li><br/>
+            </ul>
             This was my first fullstack project at this scale. It significantly expanded my experience in backend logic, application security, API integration, hosting, and performance optimization. I made critical decisions regarding technology stack, database architecture, and third-party services not only to ensure scalability and maintainability, but also to optimize the long-term operational costs of running the platform. The process challenged me to work far beyond my original frontend comfort zone — and that’s what made it especially rewarding.
             <br/><br/>
             As this is a live commercial project, the GitHub repository is not publicly available.
@@ -357,7 +359,7 @@ export const projectsList = [
             buttonText: 'Addon page'
         },
         projectUrl: 'https://polyspaace.com/addons/polyops',
-        projectGithubUrl: '',
+        projectGithubUrl: 'https://github.com/kgolec93/polyops',
         data: {
             date: '2024 - now',
             description: `
@@ -397,7 +399,7 @@ export const projectsList = [
             projectUrl: 'https://polyspaace-archive.kamilgolec.pl/',
             buttonText: 'Live project'
         },
-        projectGithubUrl: '',
+        projectGithubUrl: 'https://github.com/kgolec93/polyspaace-legacy',
         data: {
             date: '2023 - 2024',
             description: `
@@ -415,7 +417,31 @@ export const projectsList = [
                 {
                     url: '/projects/polyspaace-old/psp-old-banner.jpg',
                     alt: 'Polyspaace (legacy)'
-                }
+                },
+                {
+                    url: '/projects/polyspaace-old/psp-legacy-1.jpg',
+                    alt: 'polyspaace'
+                },
+                {
+                    url: '/projects/polyspaace-old/psp-legacy-2.jpg',
+                    alt: 'polyspaace'
+                },
+                {
+                    url: '/projects/polyspaace-old/psp-legacy-3.jpg',
+                    alt: 'polyspaace'
+                },
+                {
+                    url: '/projects/polyspaace-old/psp-legacy-4.jpg',
+                    alt: 'polyspaace'
+                },
+                {
+                    url: '/projects/polyspaace-old/psp-legacy-5.jpg',
+                    alt: 'polyspaace'
+                },
+                {
+                    url: '/projects/polyspaace-old/psp-legacy-6.jpg',
+                    alt: 'polyspaace'
+                },
             ]
         },
         tags: ['JavaScript']
@@ -433,7 +459,7 @@ export const projectsList = [
             buttonText: 'Visit website'
         },
         projectUrl: 'https://digitalarch.pl',
-        projectGithubUrl: 'https://github.com/kgolec93/digital.arch.2020',
+        projectGithubUrl: 'https://github.com/kgolec93/digitalarch-js',
         data: {
             date: '2019 - 2020',
             description: `digitalarch.pl is the official portfolio website for my architectural visualization studio, digital.ARCH, based in Wrocław, Poland. The site was developed using HTML and vanilla JavaScript, focusing on performance, clarity, and a seamless user experience. It showcases a curated selection of photorealistic 3D visualizations, highlighting the studio's unique style and technical expertise.
@@ -449,6 +475,38 @@ export const projectsList = [
                 { main: 'JavaScript', additional: '' },
             ],
             screenshots: [
+                {
+                    url: '/projects/digitalarch/digitalarch-banner.jpg',
+                    alt: 'digital.ARCH'
+                },
+                {
+                    url: '/projects/digitalarch/da-1.jpg',
+                    alt: 'digital.ARCH'
+                },
+                {
+                    url: '/projects/digitalarch/da-2.jpg',
+                    alt: 'digital.ARCH'
+                },
+                {
+                    url: '/projects/digitalarch/da-3.jpg',
+                    alt: 'digital.ARCH'
+                },
+                {
+                    url: '/projects/digitalarch/da-4.jpg',
+                    alt: 'digital.ARCH'
+                },
+                {
+                    url: '/projects/digitalarch/da-5.jpg',
+                    alt: 'digital.ARCH'
+                },
+                {
+                    url: '/projects/digitalarch/da-6.jpg',
+                    alt: 'digital.ARCH'
+                },
+                {
+                    url: '/projects/digitalarch/da-7.jpg',
+                    alt: 'digital.ARCH'
+                }
             ]
         },
         tags: ['JavaScript']

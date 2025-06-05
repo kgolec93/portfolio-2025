@@ -2,13 +2,18 @@ import { sourceCodePro } from "./ui/fonts"
 import Image from "next/image"
 import Link from "next/link"
 
+const socialIconsSize = 64
+
 export default function Home() {
   return (
     <div className="flex xl:flex-row flex-col items-center max-w-[1500px] min-h-screen pl-12 mt-24 xl:mt-0 lg:pl-0 p-4">
       <div className="textContainer w-full xl:w-3/5 flex items-center justify-center">
         <div className="textBox max-w-[420px]">
-          <h1 className={sourceCodePro.className + ' text-6xl font-black'}>Kamil Golec</h1>
-          <h2 className="text-2xl">Code Developer Portfolio</h2>
+          <div className="flex items-center">
+            <h1 className={sourceCodePro.className + ' text-7xl font-black'}>Kamil Golec</h1>
+            <Image src='/android-chrome-192x192.png' width={144} height={144} alt='logo' />
+          </div>
+          <h2 className="text-3xl text-right font-light">Software Developer Portfolio</h2>
           <p className="mt-6">
             I'm a self-taught and passionate developer with over five rewarding years of hands-on experience working with JavaScript, React, and Python. Throughout this time, I’ve completed numerous commercial and personal projects.
             I enjoy tackling complex challenges and puzzles that require creative, non-standard solutions - they push me to expand my skills and constantly grow.
@@ -16,6 +21,24 @@ export default function Home() {
             <br /><br />
             I'm currently developing and maintaining my <Link target='_blank' href='https://polyspaace.com' className='font-bold text-blue-500 hover:text-blue-700'>Polyspaace.com</Link> website, <Link target='_blank' href='https://superhivemarket.com/products/flow-manager' className='font-bold text-blue-500 hover:text-blue-700'>Flow Addon for Blender</Link> and many more interesting projects described in this portfolio.
           </p>
+          <div className="socials flex mt-6 *:mr-2 *:hover:scale-110 *:transition">
+            <Link href='https://github.com/kgolec93' target="_blank">
+              <Image
+                src={'/icons/github-142-svgrepo-com.svg'}
+                width={socialIconsSize}
+                height={socialIconsSize}
+                alt='GH'
+              />
+            </Link>
+            <Link href='https://www.linkedin.com/in/kgolec93/' target="_blank">
+              <Image
+                src={'/icons/linkedin-rounded-svgrepo-com.svg'}
+                width={socialIconsSize}
+                height={socialIconsSize}
+                alt='LI'
+              />
+            </Link>
+          </div>
         </div>
       </div>
       <div className="imageContainer max-w-[420px] xl:max-w-full w-full xl:w-2/5 mt-8 xl:m-0 flex items-center justify-start">

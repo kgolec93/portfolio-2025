@@ -146,7 +146,7 @@ export default function ProjectPage({ params }) {
                         {
                             projectData.linkButton.projectUrl != '' &&
                             <div className={buttonContainer}>
-                                <Link href={projectData.linkButton.projectUrl}  className="w-full"  target="_blank">
+                                <Link href={projectData.linkButton.projectUrl} className="w-full" target="_blank">
                                     <button className={buttonClassActive}>
                                         <Image className="mr-4" src='/icons/link_icon.png' width={iconSize} height={iconSize} alt={'url'} />
                                         <p>{projectData.linkButton.buttonText}</p>
