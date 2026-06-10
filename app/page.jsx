@@ -12,7 +12,7 @@ export default function Home() {
         <div className="textBox max-w-[420px]">
           <div className="flex items-center">
             <h1 className={sourceCodePro.className + ' text-7xl font-black'}>Kamil Golec</h1>
-            <Image src='/android-chrome-192x192.png' width={144} height={144} alt='logo' />
+            <Image src={asset('/android-chrome-192x192.png')} width={144} height={144} alt='logo' />
           </div>
           <h2 className="text-3xl text-right font-light">Web Developer Portfolio</h2>
           <p className="mt-6">
@@ -33,7 +33,7 @@ export default function Home() {
             </Link>
             <Link href='https://www.linkedin.com/in/kgolec93/' target="_blank">
               <Image
-                src={'/icons/linkedin-rounded-svgrepo-com.svg'}
+                src={asset('/icons/linkedin-rounded-svgrepo-com.svg')}
                 width={socialIconsSize}
                 height={socialIconsSize}
                 alt='LI'
