@@ -1,6 +1,7 @@
 import { sourceCodePro } from "./ui/fonts"
 import Image from "next/image"
 import Link from "next/link"
+import { asset } from "./utils/AssetPath"
 
 const socialIconsSize = 64
 
@@ -24,7 +25,7 @@ export default function Home() {
           <div className="socials flex mt-6 *:mr-2 *:hover:scale-110 *:transition">
             <Link href='https://github.com/kgolec93' target="_blank">
               <Image
-                src={'/icons/github-142-svgrepo-com.svg'}
+                src={asset('/icons/github-142-svgrepo-com.svg')}
                 width={socialIconsSize}
                 height={socialIconsSize}
                 alt='GH'
@@ -47,7 +48,7 @@ export default function Home() {
           height={1920}
           priority
           alt='kg'
-          src='/images/photo.jpg'
+          src={asset('/images/photo.jpg')}
           className="w-full xl:w-[80%] h-auto drop-shadow-xl "
         />
       </div>
