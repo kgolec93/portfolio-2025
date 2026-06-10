@@ -3,6 +3,7 @@ import Lightbox from "../ui/lightbox";
 import { MagnifyingGlassPlusIcon } from '@heroicons/react/24/outline'
 import { useState } from "react"
 import Image from "next/image"
+import { asset } from "../utils/AssetPath";
 
 export default function ImageGallery({projectData}) {
     const [lightboxImage, setLightboxImage] = useState({ show: false, url: '', index: 0 })
@@ -62,7 +63,7 @@ export default function ImageGallery({projectData}) {
                                 <div className="imageContainer aspect-video w-full md:w-1/3 p-1 " key={i}>
                                     <div className="w-full h-full overflow-hidden relative">
                                         <Image
-                                            src={item.url}
+                                            src={asset(item.url)}
                                             alt={item.url}
                                             width={192 * 4}
                                             height={108 * 4}

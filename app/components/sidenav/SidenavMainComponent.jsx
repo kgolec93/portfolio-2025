@@ -8,6 +8,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from "@heroicons/react/24/outline";
+import { asset } from "@/app/utils/AssetPath";
 
 export default function Sidenav() {
     const [projects, setProjects] = useState([{ name: 'project', idName: '', category: '', icon: '' }]);
@@ -35,7 +36,7 @@ export default function Sidenav() {
                     <Image
                         width={24}
                         height={24}
-                        src='/icons/home-icon.png'
+                        src={asset('/icons/home-icon.png')}
                         alt='home'
                         className="hover:scale-110 transition"
                         onClick={()=>setIsMenuOpen(false)}
@@ -49,7 +50,7 @@ export default function Sidenav() {
                                 <div className="my-5">
 
                                     <div key={i} className="flex items-center">
-                                        <Image src={item.icon} height={12} width={12} alt={item.name} className="text-white mr-3 !h-10 !w-10 sm:h-auto sm:w-auto" />
+                                        <Image src={asset(item.icon)} height={12} width={12} alt={item.name} className="text-white mr-3 !h-10 !w-10 sm:h-auto sm:w-auto" />
                                         <h2 className="font-black text-3xl">
                                             {item.name}
                                         </h2>
@@ -64,7 +65,7 @@ export default function Sidenav() {
                                                                 className={clsx("transition flex items-center ml-[55px] my-1 hover:bg-neutral-800 p-1 rounded-md", { '!bg-blue-400': pathname === `/${prj.idName}` })}
                                                             >
                                                                 <div className="h-[24px] w-[24px] sm:h-[32px] sm:h-[32px]w-[32px] mr-4 flex items-center">
-                                                                    <Image src={prj.icon} height={64} width={64} alt={prj.name} className="text-white mx-auto h-auto w-full" />
+                                                                    <Image src={asset(prj.icon)} height={64} width={64} alt={prj.name} className="text-white mx-auto h-auto w-full" />
                                                                 </div>
                                                                 <h3 className={`${sourceCodePro.className}`}>{prj.name}</h3>
                                                             </div>

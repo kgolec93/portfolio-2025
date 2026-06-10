@@ -57,7 +57,7 @@ export default function Lightbox({ onSwitch, onClose, image }) {
                     className="text-white w-12 hover:cursor-pointer hover:scale-105 absolute top-[50%] left-2 xl:left-6 z-6"
                     onClick={() => onSwitch('prev')}
                 />
-                <Image src={image.url} alt={image.url} width={1920} height={1080} className="z-5 select-none" draggable="false" />
+                <Image src={asset(image.url)} alt={image.url} width={1920} height={1080} className="z-5 select-none" draggable="false" />
                 <ChevronRightIcon
                     className="text-white w-12 hover:cursor-pointer hover:scale-105 absolute top-[50%] right-2 xl:right-6 z-6"
                     onClick={() => onSwitch('next')}

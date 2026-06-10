@@ -6,6 +6,7 @@ import { projectsList, placeholderProject } from "@/app/data/projects"
 import Image from "next/image"
 import Link from "next/link";
 import ImageGallery from "./ImageGallery";
+import { asset } from "../utils/AssetPath";
 
 export function generateStaticParams() {
     return projectsList.map((project) => ({
@@ -58,7 +59,7 @@ export default function ProjectPage({ params }) {
                     height={1280}
                     priority={true}
                     alt={projectData.name}
-                    src={projectData.heroImageUrl}
+                    src={asset(projectData.heroImageUrl)}
                     className="w-full h-full object-cover absolute top-0 left-0 blur-sm"
                 />
                 <div className="flex items-end justify-start z-5 bg-neutral-900/40 w-full h-full p-4 md:p-12">
@@ -68,7 +69,7 @@ export default function ProjectPage({ params }) {
                             height={128}
                             priority={true}
                             alt={`${projectData.name}_logo`}
-                            src={projectData.icon}
+                            src={asset(projectData.icon)}
                             className="w-auto h-[15vw] md:h-[128px] mr-2 md:mr-6 object-fit"
                         />
                         <h1 className="text-2xl md:text-7xl font-black text-white">{projectData.name}</h1>
@@ -83,7 +84,7 @@ export default function ProjectPage({ params }) {
                             {
                                 projectData.isCommercial ?
                                     <>
-                                        <Image className="mr-4" src='/icons/dollar_icon.png' width={iconSize} height={iconSize} alt={'dollar'} />
+                                        <Image className="mr-4" src={asset('/icons/dollar_icon.png')} width={iconSize} height={iconSize} alt={'dollar'} />
                                         <p>Commercial Project</p>
                                     </>
                                     :
@@ -91,12 +92,12 @@ export default function ProjectPage({ params }) {
                                         {
                                             projectData.isPrivate ?
                                                 <>
-                                                    <Image className="mr-4" src='/icons/user_icon.png' width={iconSize} height={iconSize} alt={'personal'} />
+                                                    <Image className="mr-4" src={asset('/icons/user_icon.png')} width={iconSize} height={iconSize} alt={'personal'} />
                                                     <p>Personal Project</p>
                                                 </>
                                                 :
                                                 <>
-                                                    <Image className="mr-4" src='/icons/education_icon.png' width={iconSize} height={iconSize} alt={'edu'} />
+                                                    <Image className="mr-4" src={asset('/icons/education_icon.png')} width={iconSize} height={iconSize} alt={'edu'} />
                                                     <p>Educational Project</p>
                                                 </>
 
@@ -112,7 +113,7 @@ export default function ProjectPage({ params }) {
                         <div className={buttonContainer}>
                             <Link href={projectData.linkButton.projectUrl} className="w-full" target="_blank">
                                 <button className={buttonClassActive}>
-                                    <Image className="mr-4" src='/icons/link_icon.png' width={iconSize} height={iconSize} alt={'url'} />
+                                    <Image className="mr-4" src={asset('/icons/link_icon.png')} width={iconSize} height={iconSize} alt={'url'} />
                                     <p>{projectData.linkButton.buttonText}</p>
                                 </button>
                             </Link>
@@ -123,13 +124,13 @@ export default function ProjectPage({ params }) {
                             projectData.projectGithubUrl != '' ?
                                 <Link href={projectData.projectGithubUrl} className="w-full" target="_blank">
                                     <button className={buttonClassActive}>
-                                        <Image className="mr-4" src='/icons/github_icon.png' width={iconSize} height={iconSize} alt={'gh'} />
+                                        <Image className="mr-4" src={asset('/icons/github_icon.png')} width={iconSize} height={iconSize} alt={'gh'} />
                                         <p>GitHub Repository</p>
                                     </button>
                                 </Link>
                                 :
                                 <button className={buttonClassDisabled}>
-                                    <Image className="mr-4" src='/icons/github_icon.png' width={iconSize} height={iconSize} alt={'gh'} />
+                                    <Image className="mr-4" src={asset('/icons/github_icon.png')} width={iconSize} height={iconSize} alt={'gh'} />
                                     <p>GitHub Repository</p>
                                 </button>
                         }
