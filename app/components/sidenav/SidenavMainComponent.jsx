@@ -49,7 +49,7 @@ export default function Sidenav() {
                                 <div className="my-5">
 
                                     <div key={i} className="flex items-center">
-                                        <Image src={item.icon} height={50} width={50} alt={item.name} className="text-white mr-3 h-10 w-10 sm:h-auto sm:w-auto" />
+                                        <Image src={item.icon} height={12} width={12} alt={item.name} className="text-white mr-3 !h-10 !w-10 sm:h-auto sm:w-auto" />
                                         <h2 className="font-black text-3xl">
                                             {item.name}
                                         </h2>

@@ -13,7 +13,7 @@ export default function Home() {
             <h1 className={sourceCodePro.className + ' text-7xl font-black'}>Kamil Golec</h1>
             <Image src='/android-chrome-192x192.png' width={144} height={144} alt='logo' />
           </div>
-          <h2 className="text-3xl text-right font-light">Software Developer Portfolio</h2>
+          <h2 className="text-3xl text-right font-light">Web Developer Portfolio</h2>
           <p className="mt-6">
             I'm a self-taught and passionate developer with over five rewarding years of hands-on experience working with JavaScript, React, and Python. Throughout this time, I’ve completed numerous commercial and personal projects.
             I enjoy tackling complex challenges and puzzles that require creative, non-standard solutions - they push me to expand my skills and constantly grow.

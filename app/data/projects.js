@@ -61,7 +61,7 @@ export const projectsList = [
             buttonText: 'Visit website'
         },
         projectUrl: 'https://polyspaace.com',
-        projectGithubUrl: '',
+        projectGithubUrl: 'https://github.com/kgolec93/polyspaace',
         data: {
             date: '2024 - now',
             description: `
@@ -92,8 +92,6 @@ export const projectsList = [
                 <li><strong>Addon integration</strong> – the database is tightly coupled with my custom-built Blender addon Flow, which allows creators to prepare assets and export metadata in JSON format. The website reads this metadata during upload and inserts appropriate database entries (e.g., category, dimensions, Blender version, technical properties, etc.).</li><br/>
             </ul>
             This was my first fullstack project at this scale. It significantly expanded my experience in backend logic, application security, API integration, hosting, and performance optimization. I made critical decisions regarding technology stack, database architecture, and third-party services not only to ensure scalability and maintainability, but also to optimize the long-term operational costs of running the platform. The process challenged me to work far beyond my original frontend comfort zone — and that’s what made it especially rewarding.
-            <br/><br/>
-            As this is a live commercial project, the GitHub repository is not publicly available.
             `,
             stack: [
                 { main: 'NextJS 15', additional: 'Frontend and Backend' },
